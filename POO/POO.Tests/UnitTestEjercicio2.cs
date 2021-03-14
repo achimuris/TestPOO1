@@ -3,7 +3,8 @@ using POO.Clases.Ejercicio02;
 
 namespace POO.Tests
 {
-    class UnitTestEjercicio2
+    [TestClass]
+    public class UnitTestEjercicio2
     {
 
         [TestMethod]
@@ -24,7 +25,7 @@ namespace POO.Tests
 
 
         [TestMethod]
-        public void TestMethodPromedioSimple()
+        public void TestMethodPromedioSimple1()
         {
             double resultadoEsperado = 7;
 
@@ -34,6 +35,21 @@ namespace POO.Tests
             objPlato.AgregarOpinion(6);
             objPlato.AgregarOpinion(7);
             objPlato.AgregarOpinion(8);
+
+
+            Assert.AreEqual(resultadoEsperado, objPlato.getOpinionPromedio());
+        }
+
+        [TestMethod]
+        public void TestMethodPromedioSimple2()
+        {
+            double resultadoEsperado = 3;
+
+
+            Plato objPlato = new Plato();
+            objPlato.Nombre = "Milanesas con papas fritas";
+            objPlato.AgregarOpinion(2);
+            objPlato.AgregarOpinion(4);
 
 
             Assert.AreEqual(resultadoEsperado, objPlato.getOpinionPromedio());
