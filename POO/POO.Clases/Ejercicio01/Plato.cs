@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace POO.Clases
+namespace POO.Clases.Ejercicio01
 {
     public class Plato
     {
@@ -23,7 +23,7 @@ namespace POO.Clases
         }
 
 
-        private double _precioBase;
+        private double _precioBase = 150;
 
         public double PrecioBase
         {
@@ -48,7 +48,7 @@ namespace POO.Clases
 
         public Plato()
         {
-            this.PrecioBase = 150;
+
         }
 
         public Plato(string elNombre, int cantidadIngredientes)
